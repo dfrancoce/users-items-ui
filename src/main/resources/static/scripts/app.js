@@ -13,10 +13,12 @@ $(document).ready(function() {
             dataType: 'json',
             data: $("#loginForm").serialize(),
             success: function(data) {
-                util.hideLoginSection();
-                const usersData = new UsersData(data);
-                const usersView = new UsersView(usersData, util);
-                usersView.initEvents();
+                if (data.length > 0) {
+                    util.hideLoginSection();
+                    const usersData = new UsersData(data);
+                    const usersView = new UsersView(usersData, util);
+                    usersView.initEvents();
+                }
             }
         });
     });
