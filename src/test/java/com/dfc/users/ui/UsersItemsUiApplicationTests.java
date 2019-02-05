@@ -1,4 +1,4 @@
-package com.dfc.usersitemsui;
+package com.dfc.users.ui;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
